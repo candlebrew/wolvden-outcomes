@@ -1,0 +1,762 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet" type="text/css" media="all">
+        <title>Wolvden Mutation Checker</title>
+    </head>
+    <body>
+        <div class="whiteBox"></div>
+        <div class="contents">
+            <div class="topcontents">
+                <div class="parentContainer">
+                    <div id="mSelect">
+                        <input class="parent-name" id="name-a" placeholder="parent 1 name">
+                        <br>
+                        <select class="parentgenes" id="mColor" required="">
+                            <option value="0">--- Color</option>
+                            <option value="1">Cool</option>
+                            <option value="2">Muted</option>
+                            <option value="3">Monochrome</option>
+                            <option value="4">Warm</option>
+                        </select>
+                        <br>
+                            <select class="parentgenes" id="mShade" required="">
+                            <option value="0">--- Shade</option>
+                            <option value="1">Light</option>
+                            <option value="2">Medium</option>
+                            <option value="3">Dark</option>
+                        </select>
+                        <br>
+                        <select class="parentgenes" id="mRarity" required="">
+                            <option value="0">--- Rarity</option>
+                            <option value="1">I</option>
+                            <option value="2">II</option>
+                            <option value="3">III</option>
+                        </select>
+                    </div>
+                    <div id="fSelect">
+                        <input class="parent-name" id="name-b" placeholder="parent 2 name">
+                        <br>
+                            <select class="parentgenes" id="fColor" required="">
+                            <option value="0">--- Color</option>
+                            <option value="1">Cool</option>
+                            <option value="2">Muted</option>
+                            <option value="3">Monochrome</option>
+                            <option value="4">Warm</option>
+                        </select>
+                        <br>
+                            <select class="parentgenes" id="fShade" required="">
+                            <option value="0">--- Shade</option>
+                            <option value="1">Light</option>
+                            <option value="2">Medium</option>
+                            <option value="3">Dark</option>
+                        </select>
+                        <br>
+                            <select class="parentgenes" id="fRarity" required="">
+                            <option value="0">--- Rarity</option>
+                            <option value="1">I</option>
+                            <option value="2">II</option>
+                            <option value="3">III</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="buttonContents">
+                    <center>
+                    <button class="checkButton" onclick="toggleBases()">Bases</button>
+                    <button class="checkButton" onclick="toggleGenes()">Genes</button>
+                    <button class="checkButton" onclick="toggleCombos()">Combinations</button>
+                    </center>
+                </div>
+            </div>
+            <div class="botContents">
+                <div id="basesList" style="display: none;">
+                    <div class="baseSection">
+                        <div id="Acanthite" class="sectionItem">
+                        </div>
+                        <div id="Almond" class="sectionItem">
+                        </div>
+                        <div id="Amber" class="sectionItem">
+                        </div>
+                        <div id="Antler" class="sectionItem">
+                        </div>
+                        <div id="Apricot" class="sectionItem">
+                        </div>
+                        <div id="Argent" class="sectionItem">
+                        </div>
+                        <div id="Arkose" class="sectionItem">
+                        </div>
+                        <div id="Ashen" class="sectionItem">
+                        </div>
+                        <div id="Auburn" class="sectionItem">
+                        </div>
+                        <div id="Beige" class="sectionItem">
+                        </div>
+                        <div id="Biotite" class="sectionItem">
+                        </div>
+                        <div id="Birch" class="sectionItem">
+                        </div>
+                        <div id="Black" class="sectionItem">
+                        </div>
+                        <div id="Blonde" class="sectionItem">
+                        </div>
+                        <div id="Blue" class="sectionItem">
+                        </div>
+                        <div id="Brass" class="sectionItem">
+                        </div>
+                        <div id="Bronze" class="sectionItem">
+                        </div>
+                        <div id="Brown" class="sectionItem">
+                        </div>
+                        <div id="Buff" class="sectionItem">
+                        </div>
+                        <div id="Calcite" class="sectionItem">
+                        </div>
+                        <div id="Caramel" class="sectionItem">
+                        </div>
+                        <div id="Chert" class="sectionItem">
+                        </div>
+                        <div id="Chestnut" class="sectionItem">
+                        </div>
+                        <div id="Chocolate" class="sectionItem">
+                        </div>
+                        <div id="Chromium" class="sectionItem">
+                        </div>
+                        <div id="Cocoa" class="sectionItem">
+                        </div>
+                        <div id="Cream" class="sectionItem">
+                        </div>
+                        <div id="CreamDarker" class="sectionItem">
+                        </div>
+                        <div id="CreamLighter" class="sectionItem">
+                        </div>
+                        <div id="DarkBrown" class="sectionItem">
+                        </div>
+                    </div>
+                    <div class="baseSection">
+                        <div id="Denim" class="sectionItem">
+                        </div>
+                        <div id="Dinar" class="sectionItem">
+                        </div>
+                        <div id="Diorite" class="sectionItem">
+                        </div>
+                        <div id="Doubloon" class="sectionItem">
+                        </div>
+                        <div id="Dravit" class="sectionItem">
+                        </div>
+                        <div id="Ducat" class="sectionItem">
+                        </div>
+                        <div id="Dust" class="sectionItem">
+                        </div>
+                        <div id="Ebony" class="sectionItem">
+                        </div>
+                        <div id="Feldspar" class="sectionItem">
+                        </div>
+                        <div id="Flint" class="sectionItem">
+                        </div>
+                        <div id="Fox" class="sectionItem">
+                        </div>
+                        <div id="Galena" class="sectionItem">
+                        </div>
+                        <div id="Glaucous" class="sectionItem">
+                        </div>
+                        <div id="Gold" class="sectionItem">
+                        </div>
+                        <div id="GoldDarker" class="sectionItem">
+                        </div>
+                        <div id="GoldLighter" class="sectionItem">
+                        </div>
+                        <div id="Goldenrod" class="sectionItem">
+                        </div>
+                        <div id="Gray" class="sectionItem">
+                        </div>
+                        <div id="GrayDarker" class="sectionItem">
+                        </div>
+                        <div id="GrayLighter" class="sectionItem">
+                        </div>
+                        <div id="Grulla" class="sectionItem">
+                        </div>
+                        <div id="Henna" class="sectionItem">
+                        </div>
+                        <div id="Honey" class="sectionItem">
+                        </div>
+                        <div id="Honeydew" class="sectionItem">
+                        </div>
+                        <div id="Howlite" class="sectionItem">
+                        </div>
+                        <div id="Iridium" class="sectionItem">
+                        </div>
+                        <div id="Isabel" class="sectionItem">
+                        </div>
+                        <div id="Jacinthe" class="sectionItem">
+                        </div>
+                        <div id="Jet" class="sectionItem">
+                        </div>
+                        <div id="Khaki" class="sectionItem">
+                        </div>
+                    </div>
+                    <div class="baseSection">
+                        <div id="Lavender" class="sectionItem">
+                        </div>
+                        <div id="Lilac" class="sectionItem">
+                        </div>
+                        <div id="Lily" class="sectionItem">
+                        </div>
+                        <div id="Liver" class="sectionItem">
+                        </div>
+                        <div id="Magnolia" class="sectionItem">
+                        </div>
+                        <div id="Maltese" class="sectionItem">
+                        </div>
+                        <div id="Marengo" class="sectionItem">
+                        </div>
+                        <div id="Melchior" class="sectionItem">
+                        </div>
+                        <div id="Mojave" class="sectionItem">
+                        </div>
+                        <div id="Nepheline" class="sectionItem">
+                        </div>
+                        <div id="Nocturne" class="sectionItem">
+                        </div>
+                        <div id="Obsidian" class="sectionItem">
+                        </div>
+                        <div id="Onyx" class="sectionItem">
+                        </div>
+                        <div id="Opal" class="sectionItem">
+                        </div>
+                        <div id="Oroide" class="sectionItem">
+                        </div>
+                        <div id="Pale" class="sectionItem">
+                        </div>
+                        <div id="Peach" class="sectionItem">
+                        </div>
+                        <div id="Pearl" class="sectionItem">
+                        </div>
+                        <div id="Pecan" class="sectionItem">
+                        </div>
+                        <div id="Pewter" class="sectionItem">
+                        </div>
+                        <div id="Piasa" class="sectionItem">
+                        </div>
+                        <div id="Pyrope" class="sectionItem">
+                        </div>
+                        <div id="Quartz" class="sectionItem">
+                        </div>
+                        <div id="Realgar" class="sectionItem">
+                        </div>
+                        <div id="Red" class="sectionItem">
+                        </div>
+                        <div id="Rime" class="sectionItem">
+                        </div>
+                        <div id="Russet" class="sectionItem">
+                        </div>
+                        <div id="Rust" class="sectionItem">
+                        </div>
+                        <div id="Saffron" class="sectionItem">
+                        </div>
+                        <div id="Sandy" class="sectionItem">
+                        </div>
+                    </div>
+                    <div class="baseSection">
+                        <div id="Sarder" class="sectionItem">
+                        </div>
+                        <div id="Seal" class="sectionItem">
+                        </div>
+                        <div id="Sepia" class="sectionItem">
+                        </div>
+                        <div id="Serpentine" class="sectionItem">
+                        </div>
+                        <div id="Shell" class="sectionItem">
+                        </div>
+                        <div id="Silver" class="sectionItem">
+                        </div>
+                        <div id="Siqoq" class="sectionItem">
+                        </div>
+                        <div id="Skarn" class="sectionItem">
+                        </div>
+                        <div id="Sky" class="sectionItem">
+                        </div>
+                        <div id="Slate" class="sectionItem">
+                        </div>
+                        <div id="Snow" class="sectionItem">
+                        </div>
+                        <div id="Sphalerite" class="sectionItem">
+                        </div>
+                        <div id="Steele" class="sectionItem">
+                        </div>
+                        <div id="Sterling" class="sectionItem">
+                        </div>
+                        <div id="StripedFlint" class="sectionItem">
+                        </div>
+                        <div id="Sulphur" class="sectionItem">
+                        </div>
+                        <div id="Tawny" class="sectionItem">
+                        </div>
+                        <div id="Teardrop" class="sectionItem">
+                        </div>
+                        <div id="Titanium" class="sectionItem">
+                        </div>
+                        <div id="Tombac" class="sectionItem">
+                        </div>
+                        <div id="Tuff" class="sectionItem">
+                        </div>
+                        <div id="Tumbleweed" class="sectionItem">
+                        </div>
+                        <div id="Vanilla" class="sectionItem">
+                        </div>
+                        <div id="White" class="sectionItem">
+                        </div>
+                        <div id="Willow" class="sectionItem">
+                        </div>
+                        <div id="Wulfenite" class="sectionItem">
+                        </div>
+                        <div id="Yellow" class="sectionItem">
+                        </div>
+                        <div id="Zircon" class="sectionItem">
+                        </div>
+                    </div>
+                </div>
+                <div id="genesList" style="display: none;">
+                    <div class="sectionList">
+                        <div id="geneCool" class="sectionItem coolDark">
+                        </div>
+                        <div id="geneWarm" class="sectionItem warmDark">
+                        </div>
+                        <div id="geneMono" class="sectionItem monoDark">
+                        </div>
+                        <div id="geneMuted" class="sectionItem mutedDark">
+                        </div>
+                    </div>
+                    <div class="sectionList">
+                        <div id="geneLight" class="sectionItem monoLight">
+                        </div>
+                        <div id="geneMed" class="sectionItem monoMedium">
+                        </div>
+                        <div id="geneDark" class="sectionItem monoDark">
+                        </div>
+                        <div class="sectionItem">
+                        &nbsp;
+                        </div>
+                        <div class="sectionItem">
+                        &nbsp;
+                        </div>
+                        <div id="geneBoost" class="sectionItem blackText">
+                        </div>
+                    </div>
+                    <div class="sectionList">
+                        <div id="geneOne" class="sectionItem rarityI">
+                        </div>
+                        <div id="geneTwo" class="sectionItem rarityII">
+                        </div>
+                        <div id="geneThree" class="sectionItem rarityIII">
+                        </div>
+                    </div>
+                </div>
+                <div id="combosList" style="display: none;">
+                    <div class="comboList">
+                        <div class="colorSection">
+                            <div class="sectionHeader coolDark">
+                                Cool
+                            </div>
+                            <div class="shadeSection">
+                                <div class="sectionHeader coolLight">
+                                    Light
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader coolLight">
+                                        I
+                                    </div>
+                                    <div id="coolLightI">
+                                        CLI
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader coolLight">
+                                        II
+                                    </div>
+                                    <div id="coolLightII">
+                                        CLII
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader coolLight">
+                                        III
+                                    </div>
+                                    <div id="coolLightIII">
+                                        CLIII
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shadeSection">
+                                <div class="sectionHeader coolMedium">
+                                    Medium
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader coolMedium">
+                                        I
+                                    </div>
+                                    <div id="coolMediumI">
+                                        CMI
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader coolMedium">
+                                        II
+                                    </div>
+                                    <div id="coolMediumII">
+                                        CMII
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader coolMedium">
+                                        III
+                                    </div>
+                                    <div id="coolMediumIII">
+                                        CMIII
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shadeSection">
+                                <div class="sectionHeader coolDark">
+                                    Dark
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader coolDark">
+                                        I
+                                    </div>
+                                    <div id="coolDarkI">
+                                        CDI
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader coolDark">
+                                        II
+                                    </div>
+                                    <div id="coolDarkII">
+                                        CDII
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader coolDark">
+                                        III
+                                    </div>
+                                    <div id="coolDarkIII">
+                                        CDIII
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="colorSection">
+                            <div class="sectionHeader warmDark">
+                                Warm
+                            </div>
+                            <div class="shadeSection">
+                                <div class="sectionHeader warmLight">
+                                    Light
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader warmLight">
+                                        I
+                                    </div>
+                                    <div id="warmLightI">
+                                        WLI
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader warmLight">
+                                        II
+                                    </div>
+                                    <div id="warmLightII">
+                                        WLII
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader warmLight">
+                                        III
+                                    </div>
+                                    <div id="warmLightIII">
+                                        WLIII
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shadeSection">
+                                <div class="sectionHeader warmMedium">
+                                    Medium
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader warmMedium">
+                                        I
+                                    </div>
+                                    <div id="warmMediumI">
+                                        WMI
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader warmMedium">
+                                        II
+                                    </div>
+                                    <div id="warmMediumII">
+                                        WMII
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader warmMedium">
+                                        III
+                                    </div>
+                                    <div id="warmMediumIII">
+                                        WMIII
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shadeSection">
+                                <div class="sectionHeader warmDark">
+                                    Dark
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader warmDark">
+                                        I
+                                    </div>
+                                    <div id="warmDarkI">
+                                        WDI
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader warmDark">
+                                        II
+                                    </div>
+                                    <div id="warmDarkII">
+                                        WDII
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader warmDark">
+                                        III
+                                    </div>
+                                    <div id="warmDarkIII">
+                                        WDIII
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="colorSection">
+                            <div class="sectionHeader monoDark">
+                                Monochrome
+                            </div>
+                            <div class="shadeSection">
+                                <div class="sectionHeader monoLight">
+                                    Light
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader monoLight">
+                                        I
+                                    </div>
+                                    <div id="monoLightI">
+                                        MoLI
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader monoLight">
+                                        II
+                                    </div>
+                                    <div id="monoLightII">
+                                        MoLII
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader monoLight">
+                                        III
+                                    </div>
+                                    <div id="monoLightIII">
+                                        MoLIII
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shadeSection">
+                                <div class="sectionHeader monoMedium">
+                                    Medium
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader monoMedium">
+                                        I
+                                    </div>
+                                    <div id="monoMediumI">
+                                        MoMI
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader monoMedium">
+                                        II
+                                    </div>
+                                    <div id="monoMediumII">
+                                        MoMII
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader monoMedium">
+                                        III
+                                    </div>
+                                    <div id="monoMediumIII">
+                                        MoMIII
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shadeSection">
+                                <div class="sectionHeader monoDark">
+                                    Dark
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader monoDark">
+                                        I
+                                    </div>
+                                    <div id="monoDarkI">
+                                        MoDI
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader monoDark">
+                                        II
+                                    </div>
+                                    <div id="monoDarkII">
+                                        MoDII
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader monoDark">
+                                        III
+                                    </div>
+                                    <div id="monoDarkIII">
+                                        MoDIII
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="colorSection">
+                            <div class="sectionHeader mutedDark">
+                                Muted
+                            </div>
+                            <div class="shadeSection">
+                                <div class="sectionHeader mutedLight">
+                                    Light
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader mutedLight">
+                                        I
+                                    </div>
+                                    <div id="mutedLightI">
+                                        MuLI
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader mutedLight">
+                                        II
+                                    </div>
+                                    <div id="mutedLightII">
+                                        MuLII
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader mutedLight">
+                                        III
+                                    </div>
+                                    <div id="mutedLightIII">
+                                        MuLIII
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shadeSection">
+                                <div class="sectionHeader mutedMedium">
+                                    Medium
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader mutedMedium">
+                                        I
+                                    </div>
+                                    <div id="mutedMediumI">
+                                        MuMI
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader mutedMedium">
+                                        II
+                                    </div>
+                                    <div id="mutedMediumII">
+                                        MuMII
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader mutedMedium">
+                                        III
+                                    </div>
+                                    <div id="mutedMediumIII">
+                                        MuMIII
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shadeSection">
+                                <div class="sectionHeader mutedDark">
+                                    Dark
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader mutedDark">
+                                        I
+                                    </div>
+                                    <div id="mutedDarkI">
+                                        MuDI
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader mutedDark">
+                                        II
+                                    </div>
+                                    <div id="mutedDarkII">
+                                        MuDII
+                                    </div>
+                                </div>
+                                <div class="raritySection">
+                                    <div class="sectionHeader mutedDark">
+                                        III
+                                    </div>
+                                    <div id="mutedDarkIII">
+                                        MuDIII
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="popup" onclick="popFunction()">
+                <center>Instructions:</center>
+                <br />1. Copy & Paste the URL of the scry result you would like to check. You can use right-click "copy image link" for this. Alternatively, host it on a website such as imgur, then copy-paste the link.
+                <br />2. Select which mutation you would like to check for, Albino or Melanism.
+                <br />3. Click "check result" to load your image.
+                <br />4. Click "toggle image" to check the base image. If it seems like nothing happens, your offspring has the mutation. Otherwise, you will be able to see the differences.
+                <center><p><i>Click me to make me go away.</i></p></center>
+            </div>
+            <div id="copyright">
+                ©
+            </div>
+            <div class="credits">
+                <p>By Kendall Churchil | <b><a href="https://www.wolvden.com/profile/1639">ranuncudahlia#1639</a></b></p>
+                <p>Background by <b><a href="https://ocellifera.com/">Koby Hughes</a></b> | <b><a href="https://twitter.com/ocellifera">@ocellifera</a></b></p>
+                <p>Puppy bases (empty, Melanistic, and Albinistic) by <b><a href="https://www.wolvden.com/">Wolvden</a></b></p>
+            </div>
+            <script>
+                function popFunction() {
+                    var x = document.getElementById('popup');
+                    if (x.style.display === 'none') {
+                        x.style.display = 'inline-block';
+                    } else {
+                        x.style.display = 'none';
+                    }
+                }
+            </script>
+            <script src="toggles.js" type="text/javascript"></script> 
+            <script src="calculateBases.js" type="text/javascript"></script> 
+            <script src="calculateGenes.js" type="text/javascript"></script> 
+            <script src="calculateCombos.js" type="text/javascript"></script> 
+            <script src="editCombos.js" type="text/javascript"></script> 
+            <script src="editBases.js" type="text/javascript"></script> 
+        </div>
+    </body>
+</html>

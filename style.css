@@ -1,0 +1,784 @@
+body {
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+  background-attachment: fixed;
+}
+
+.contents {
+ width: 55%;
+ background-color: rgba(255,255,255,0.8);
+ margin: -10px auto 0 auto;
+ padding: 5px;
+ color: #777;
+ height: 100%;
+}
+
+.topContents {
+  width: 650px;
+  height: 200px;
+  margin: 10px auto 0px auto;
+  overflow: hidden;
+}
+
+.parentContainer {
+  width: 650px;
+  height: 100px;
+  margin: 10px auto 0px auto;
+  overflow: hidden;
+}
+
+.parent-name {
+  margin: 2px;
+  text-align: center;
+  width: 50%;
+}
+
+#mSelect {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+
+#fSelect {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  float: right;
+  overflow: hidden;
+}
+
+.parentgenes {
+  width: 50%;
+  margin: 2px;
+  text-align: center;
+}
+
+.buttonContents {
+  width: 650px;
+  margin-top: 15px;
+}
+
+.checkButton {
+  background-color: #1b2f4f;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+  width: 150px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.checkButton:active {
+  background-color: #071833;
+}
+  
+.botContents {
+  position: relative;
+  width: 90%;
+  height: 550px;
+  margin: 10px auto 0 auto;
+}
+
+#basesList {
+}
+
+#genesList {
+}
+
+#combosList {
+}
+
+.sectionList {
+  position: relative;
+  width: 33.33%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  text-align: center;
+}
+
+.baseSection {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  text-align: center;
+}
+
+.sectionItem {
+    width: 100%;
+    color: #fff;
+    font-family: "Open Sans";
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.blackText {
+  color: #000 !important;
+}
+
+.sectionHeader {
+    position: relative;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    height: 22px;
+    font-family: "Open Sans";
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.colorSection {
+  position: relative;
+  width: 100%;
+  height: 20%;
+  margin-top: 22px;
+}
+
+.shadeSection, .raritySection {
+  position: relative;
+  width: 33.33%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  text-align: center;
+}
+
+.rarityI {
+  background-color: #662b0f;
+}
+
+.rarityII {
+  background-color: #8c8c8c;
+}
+
+.rarityIII {
+  background-color: #ffc670;
+}
+
+.coolDark {
+    background-color: #264c87;
+}
+
+.coolMedium {
+    background-color: #5180c9;
+}
+
+.coolLight {
+    background-color: #80abed;
+}
+
+.warmDark {
+    background-color: #873d26;
+}
+
+.warmMedium {
+    background-color: #c4694d;
+}
+
+.warmLight {
+    background-color: #e89176;
+}
+
+.mutedDark {
+    background-color: #69523d;
+}
+
+.mutedMedium {
+    background-color: #967c63;
+}
+
+.mutedLight {
+    background-color: #baa591;
+}
+
+.monoDark {
+    background-color: #595959;
+}
+
+.monoMedium {
+    background-color: #808080;
+}
+
+.monoLight {
+    background-color: #ababab;
+}
+
+#popup {
+    width: 300px;
+    padding: 8px;
+    position: fixed;
+    top: 30px;
+    cursor: pointer;
+    left: 30px;
+    background-color: rgba(55, 74, 67, 0.8);
+    color: #b0bfba;
+    border-radius: 10px;
+    font-family: "Open Sans";
+}
+
+.credits {
+    width: 173px;
+    padding: 10px;
+    position: fixed;
+    bottom: 15px;
+    cursor: pointer;
+    right: 35px;
+    background-color: rgba(255, 255, 255, 0.35);
+    color: #fff;
+    border-radius: 10px;
+    font-family: "Open Sans";
+    font-size: 10px;
+    text-align: right;
+}
+
+#copyright {
+  position: fixed;
+  bottom: 17px;
+  right: 10px;
+  color: #fff;
+  font-size: 20px;
+}
+
+a, a:visited, a:active {
+  color: #000;
+}
+
+a:hover {
+  color: #fff;
+}
+
+#Acanthite {
+	background-color: #43404a;
+}
+
+#Almond {
+	background-color: #d4c098;
+	color: #6e4821 !important;
+}
+
+#Amber {
+	background-color: #82420a;
+}
+
+#Antler {
+	background-color: #b3a389;
+	color: #664830 !important;
+}
+
+#Apricot {
+	background-color: #ffc582;
+	color: #9c5e32 !important;
+}
+
+#Argent {
+	background-color: #f5dfdf;
+	color: #a35f5f !important;
+}
+
+#Arkose {
+	background-color: #c97b7e;
+}
+
+#Ashen {
+	background-color: #a6a6a6;
+	color: #303030 !important;
+}
+
+#Auburn {
+	background-color: #5c1809;
+}
+
+#Beige {
+	background-color: #ffd7a3;
+	color: #87582f !important;
+}
+
+#Biotite {
+	background-color: #262626;
+}
+
+#Birch {
+	background-color: #b5bfb0;
+	color: #354f3f !important;
+}
+
+#Black {
+	background-color: #000;
+}
+
+#Blonde {
+	background-color: #ad9165;
+	color: #6e4d35 !important;
+}
+
+#Blue {
+	background-color: #646b75;
+}
+
+#Brass {
+	background-color: #e8ac4a;
+	color: #94400c !important;
+}
+
+#Bronze {
+	background-color: #1f0f06;
+}
+
+#Brown {
+	background-color: #593520;
+}
+
+#Buff {
+	background-color: #c4a382;
+	color: #5c3b27 !important;
+}
+
+#Calcite {
+	background-color: #ffdb99;
+	color: #85582c !important;
+}
+
+#Caramel {
+	background-color: #805c52;
+}
+
+#Chert {
+	background-color: #99948d;
+	color: #3b352d !important;
+}
+
+#Chestnut {
+	background-color: #2e1818;
+}
+
+#Chocolate {
+	background-color: #451c16;
+}
+
+#Chromium {
+	background-color: #bdb9b5;
+	color: #474542 !important;
+}
+
+#Cocoa {
+	background-color: #a38e81;
+	color: #42312a !important;
+}
+
+#Cream {
+	background-color: #e3be8d;
+	color: #543c29 !important;
+}
+
+#CreamDarker {
+	background-color: #c7a577;
+	color: #452a19 !important;
+}
+
+#CreamLighter {
+	background-color: #e3c8a3;
+	color: #593f2b !important;
+}
+
+#DarkBrown {
+	background-color: #542b1b;
+}
+
+#Denim {
+	background-color: #25344d;
+}
+
+#Dinar {
+	background-color: #7d481a;
+}
+
+#Diorite {
+	background-color: #a5c6cf;
+	color: #3a4f5e !important;
+}
+
+#Doubloon {
+	background-color: #a3571d;
+}
+
+#Dravit {
+	background-color: #57281b;
+}
+
+#Ducat {
+	background-color: #cf9255;
+	color: #5c3118 !important;
+}
+
+#Dust {
+	background-color: #d6c7b2;
+	color: #524337 !important;
+}
+
+#Ebony {
+	background-color: #2e2623;
+}
+
+#Feldspar {
+	background-color: #e3b5a3;
+	color: #693c45 !important;
+}
+
+#Flint {
+	background-color: #b8afa7;
+	color: #3d3734 !important;
+}
+
+#Fox {
+	background-color: #b54b04;
+}
+
+#Galena {
+	background-color: #656a73;
+}
+
+#Glaucous {
+	background-color: #c5cfe0;
+	color: #704d57 !important;
+}
+
+#Gold {
+	background-color: #f29446;
+	color: #942e0c !important;
+}
+
+#GoldDarker {
+	background-color: #e06d0d;
+}
+
+#GoldLighter {
+	background-color: #ff9f4f;
+	color: #b33c14 !important;
+}
+
+#Goldenrod {
+	background-color: #ffbe4f;
+	color: #a85313 !important;
+}
+
+#Gray {
+	background-color: #5e5e5e;
+}
+
+#GrayDarker {
+	background-color: #424242;
+}
+
+#GrayLighter {
+	background-color: #737373;
+}
+
+#Grulla {
+	background-color: #2e2b2b;
+}
+
+#Henna {
+	background-color: #4f0800;
+}
+
+#Honey {
+	background-color: #8f4b10;
+}
+
+#Honeydew {
+	background-color: #e7e89b;
+	color: #728749 !important; /* */
+}
+
+#Howlite {
+	background-color: #6e6e6e;
+}
+
+#Iridium {
+	background-color: #242424;
+}
+
+#Isabel {
+	background-color: #c7b1ab;
+	color: #80534e !important;
+}
+
+#Jacinthe {
+	background-color: #deb47a;
+	color: #734322 !important;
+}
+
+#Jet {
+	background-color: #222124;
+}
+
+#Khaki {
+	background-color: #585c41;
+}
+
+#Lavender {
+	background-color: #e5d5eb;
+	color: #61467a !important;
+}
+
+#Lilac {
+	background-color: #736063;
+}
+
+#Lily {
+	background-color: #b59696;
+}
+
+#Liver {
+	background-color: #401008;
+}
+
+#Magnolia {
+	background-color: #ffd6ab;
+	color: #73503b !important;
+}
+
+#Maltese {
+	background-color: #3a4357;
+}
+
+#Marengo {
+	background-color: #2d3038;
+}
+
+#Melchior {
+	background-color: #695a4e;
+}
+
+#Mojave {
+	background-color: #d18475;
+}
+
+#Nepheline {
+	background-color: #c2c2c2;
+	color: #525252 !important;
+}
+
+#Nocturne {
+	background-color: #23313b;
+}
+
+#Obsidian {
+	background-color: #24201f;
+}
+
+#Onyx {
+	background-color: #28292b;
+}
+
+#Opal {
+	background-color: #afbabd;
+	color: #383d5e !important;
+}
+
+#Oroide {
+	background-color: #8f4f0a;
+}
+
+#Pale {
+	background-color: #929fa1;
+	color: #593f49 !important; /* */
+}
+
+#Peach {
+	background-color: #d99e84;
+	color: #803c29 !important;
+}
+
+#Pearl {
+	background-color: #d6bca1;
+	color: #635648 !important; /* */
+}
+
+#Pecan {
+	background-color: #543c27;
+}
+
+#Pewter {
+	background-color: #34353b;
+}
+
+#Piasa {
+	background-color: #a15d1d;
+}
+
+#Pyrope {
+	background-color: #570811;
+}
+
+#Quartz {
+	background-color: #e8ebed;
+	color: #7a7f82 !important;
+}
+
+#Realgar {
+	background-color: #bd4126;
+}
+
+#Red {
+	background-color: #9e1a00;
+}
+
+#Rime {
+	background-color: #c2b4a7;
+	color: #635045 !important;
+}
+
+#Russet {
+	background-color: #702818;
+}
+
+#Rust {
+	background-color: #bf694d;
+}
+
+#Saffron {
+	background-color: #f09f59;
+	color: #a14720 !important;
+}
+
+#Sandy {
+	background-color: #916540;
+}
+
+#Sarder {
+	background-color: #3d0d0d;
+}
+
+#Seal {
+	background-color: #24120b;
+}
+
+#Sepia {
+	background-color: #663d26;
+}
+
+#Serpentine {
+	background-color: #5f694e;
+}
+
+#Shell {
+	background-color: #e3d4ca;
+	color: #7d6359 !important;
+}
+
+#Silver {
+	background-color: #b4b8b6;
+	color: #4d5452 !important;
+}
+
+#Siqoq {
+	background-color: #bdb6af;
+	color: #665c56 !important;
+}
+
+#Skarn {
+	background-color: #453724;
+}
+
+#Sky {
+	background-color: #bcd5e3;
+	color: #39496e !important;
+}
+
+#Slate {
+	background-color: #262829;
+}
+
+#Snow {
+	background-color: #ccc9c4;
+	color: #706c5f !important;
+}
+
+#Sphalerite {
+	background-color: #5c5753;
+}
+
+#Steele {
+	background-color: #757371;
+}
+
+#Sterling {
+	background-color: #595b5e;
+}
+
+#StripedFlint {
+	background-color: #737373;
+}
+
+#Sulphur {
+	background-color: #d49537;
+	color: #91490d !important;
+}
+
+#Tawny {
+	background-color: #ba6936;
+}
+
+#Teardrop {
+	background-color: #ffbbad;
+	color: #8f7d2e !important; /* */
+}
+
+#Titanium {
+	background-color: #b4b7b8;
+	color: #4d5357 !important;
+}
+
+#Tombac {
+	background-color: #ffe478;
+	color: #996c12 !important;
+}
+
+#Tuff {
+	background-color: #917e51;
+}
+
+#Tumbleweed {
+	background-color: #9c8268;
+}
+
+#Vanilla {
+	background-color: #b3a488;
+	color: #6b5841 !important;
+}
+
+#White {
+	background-color: #fff;
+	color: #555555 !important;
+}
+
+#Willow {
+	background-color: #96897e;
+	color: #4a3930 !important;
+}
+
+#Wulfenite {
+	background-color: #8c3715;
+}
+
+#Yellow {
+	background-color: #e0ac51;
+	color: #8a4708 !important;
+}
+
+#Zircon {
+	background-color: #d1ad9d;
+	color: #7d6843 !important; /* */
+}
+
